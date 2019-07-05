@@ -1,0 +1,34 @@
+{
+  "name": "Blog-Ecommerce/everhour-php-lib",
+  "description": "PHP Library for the Everhour API",
+  "keywords": [
+    "php", "library", "everhour", "api"
+  ],
+  "type": "library",
+  "license": "LGPL-3.0",
+  "homepage": "https://github.com/Blog-Ecommerce/everhour-php-lib",
+  "authors": [{
+    "name": "Luis Da Costa",
+    "email": "luis@blog-ecommerce.com",
+    "homepage": "https://capsule-b.com"
+  }],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "support": {
+    "issues": "https://github.com/Blog-Ecommerce/everhour-php-lib/issues",
+    "source": "https://github.com/Blog-Ecommerce/everhour-php-lib"
+  },
+  "autoload": {
+    "psr-0": {
+      "Everhour": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": ["tests"]
+  }
+}
