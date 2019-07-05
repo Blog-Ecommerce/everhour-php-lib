@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2271596996859fe3ebfed7655d353820",
+    "content-hash": "dc1aa8fb128c5ec8c1aa441646c755dc",
     "packages": [],
     "packages-dev": [
         {
@@ -1198,7 +1198,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "capsule-b/everhour-php-lib": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
