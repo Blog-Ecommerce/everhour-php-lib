@@ -1,11 +1,11 @@
 {
-  "name": "Blog-Ecommerce/everhour-php-lib",
+  "name": "blog-ecommerce/everhour-php-lib",
   "description": "PHP Library for the Everhour API",
   "keywords": [
     "php", "library", "everhour", "api"
   ],
   "type": "library",
-  "license": "LGPL-3.0",
+  "license": "LGPL-3.0-or-later",
   "homepage": "https://github.com/Blog-Ecommerce/everhour-php-lib",
   "authors": [{
     "name": "Luis Da Costa",
