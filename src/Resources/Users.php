@@ -1,8 +1,8 @@
 <?php
 
-namespace EverHour\Resources;
+namespace CapsuleB\EverHour\Resources;
 
-use EverHour\Client;
+use CapsuleB\EverHour\Client;
 
 /**
  * Class Users

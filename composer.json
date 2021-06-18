@@ -6,7 +6,7 @@
   ],
   "type": "library",
   "license": "LGPL-3.0-or-later",
-  "homepage": "https://github.com/Blog-Ecommerce/everhour-php-lib",
+  "homepage": "https://github.com/Blog-Ecommerce/zoho-subscriptions-php-lib",
   "authors": [{
     "name": "Luis Da Costa",
     "email": "luis@blog-ecommerce.com",
@@ -15,7 +15,8 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.1.0",
-    "ext-curl": "*"
+    "ext-curl": "*",
+    "ext-json": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0"
@@ -25,8 +26,8 @@
     "source": "https://github.com/Blog-Ecommerce/everhour-php-lib"
   },
   "autoload": {
-    "psr-0": {
-      "Everhour": "src/"
+    "psr-4": {
+      "CapsuleB\\EverHour\\": "src/"
     }
   },
   "autoload-dev": {

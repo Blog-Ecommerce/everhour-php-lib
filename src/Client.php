@@ -1,11 +1,11 @@
 <?php
 
-namespace Everhour;
+namespace CapsuleB\EverHour;
 
-use EverHour\Resources\Projects;
-use EverHour\Resources\Tasks;
-use EverHour\Resources\TimeRecording;
-use EverHour\Resources\Users;
+use CapsuleB\EverHour\Resources\Projects;
+use CapsuleB\EverHour\Resources\Tasks;
+use CapsuleB\EverHour\Resources\TimeRecording;
+use CapsuleB\EverHour\Resources\Users;
 use Exception;
 
 /**
@@ -42,7 +42,7 @@ class Client {
    * @param array $params
    * @return array|Exception|mixed|object
    */
-  public function request($method, $path, $params = []) {
+  public function request($method, $path, array $params = []) {
     // Reset any previous request
     $this->curlClient = curl_init();
 
@@ -87,7 +87,7 @@ class Client {
    * @param array $params
    * @return array|mixed|object
    */
-  public function post($path, $params = []) {
+  public function post($path, array $params = []) {
     return $this->request('POST', $path, $params);
   }
 
@@ -96,7 +96,7 @@ class Client {
    * @param array $params
    * @return array|mixed|object
    */
-  public function put($path, $params = []) {
+  public function put($path, array $params = []) {
     return $this->request('PUT', $path, $params);
   }
 

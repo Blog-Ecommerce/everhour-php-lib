@@ -1,8 +1,8 @@
 <?php
 
-namespace EverHour\Resources;
+namespace CapsuleB\EverHour\Resources;
 
-use EverHour\Client;
+use CapsuleB\EverHour\Client;
 
 /**
  * Class Tasks
@@ -42,7 +42,7 @@ class Tasks {
    * @param array $params
    * @return array|mixed|object
    */
-  public function update($task, $params = []) {
+  public function update($task, array $params = []) {
     $path = sprintf("/tasks/%s", $task);
     return $this->client->put($path, $params);
   }

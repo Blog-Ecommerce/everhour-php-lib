@@ -1,8 +1,8 @@
 <?php
 
-namespace EverHour\Resources;
+namespace CapsuleB\EverHour\Resources;
 
-use EverHour\Client;
+use CapsuleB\EverHour\Client;
 
 /**
  * Class TimeRecording
@@ -24,7 +24,7 @@ class TimeRecording {
    * @param array $params
    * @return array|mixed|object
    */
-  public function updateInTask($task, $params = []) {
+  public function updateInTask($task, array $params = []) {
     $path = sprintf("/tasks/%s/time", $task);
     return $this->client->put($path, $params);
   }
