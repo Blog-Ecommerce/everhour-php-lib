@@ -6,7 +6,7 @@ use CapsuleB\EverHour\Client;
 
 /**
  * Class Users
- * @package EverHour\Resources
+ * @package CapsuleB\EverHour\Resources
  *
  * @property Client $client
  */
@@ -22,14 +22,14 @@ class Users {
   /**
    * @return array|mixed|object
    */
-  public function me() {
+  public function getCurrent() {
     return $this->client->get('/users/me');
   }
 
   /**
    * @return array|mixed|object
    */
-  public function findAll() {
+  public function getAll() {
     return $this->client->get('/team/users');
   }
 }

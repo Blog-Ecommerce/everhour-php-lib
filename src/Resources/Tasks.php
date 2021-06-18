@@ -6,7 +6,7 @@ use CapsuleB\EverHour\Client;
 
 /**
  * Class Tasks
- * @package EverHour\Resources
+ * @package CapsuleB\EverHour\Resources
  *
  * @property Client $client
  */
@@ -23,7 +23,7 @@ class Tasks {
    * @param $project
    * @return array|mixed|object
    */
-  public function findByProject($project) {
+  public function getByProject($project) {
     $path = sprintf("/projects/%s/tasks", $project);
     return $this->client->get($path);
   }
@@ -32,7 +32,7 @@ class Tasks {
    * @param $task
    * @return array|mixed|object
    */
-  public function findById($task) {
+  public function get($task) {
     $path = sprintf("/tasks/%s", $task);
     return $this->client->get($path);
   }

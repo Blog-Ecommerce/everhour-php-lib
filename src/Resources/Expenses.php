@@ -6,14 +6,17 @@ use CapsuleB\EverHour\Client;
 use Exception;
 
 /**
- * Class Projects
+ * Class Expenses
  * @package CapsuleB\EverHour\Resources
  *
  * @property Client $client
  */
-class Projects {
+class Expenses {
+
+  const BASE_URL = 'clients';
+
   /**
-   * Projects constructor.
+   * Expenses constructor.
    * @param Client $client
    */
   public function __construct(Client $client) {
@@ -21,41 +24,23 @@ class Projects {
   }
 
   /**
-   * @return array|mixed|object
+   * @throws Exception
    */
   public function getAll() {
-    return $this->client->get('/projects');
-  }
-
-  /**
-   * @param $project string
-   * @return array|mixed|object
-   */
-  public function get(string $project) {
-    $path = sprintf("/projects/%s", $project);
-    return $this->client->get($path);
-  }
-
-  /**
-   * @return array|mixed|object
-   */
-  public function create() {
-    return $this->client->post('/projects');
-  }
-
-  /**
-   * @param $project
-   * @return array|mixed|object
-   */
-  public function update($project) {
-    $path = sprintf("/projects/%s", $project);
-    return $this->client->put($path);
+    throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function updateBillingBudget() {
+  public function create() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function update() {
     throw new Exception('Not implemented');
   }
 
@@ -69,35 +54,56 @@ class Projects {
   /**
    * @throws Exception
    */
-  public function getAllSections() {
+  public function getAllCategories() {
     throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function getSection() {
+  public function createCategory() {
     throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function createSection() {
+  public function updateCategory() {
     throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function updateSection() {
+  public function deleteCategory() {
     throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function deleteSection() {
+  public function createAttachment() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function addAttachment() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function downloadAttachment() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function deleteAttachment() {
     throw new Exception('Not implemented');
   }
 

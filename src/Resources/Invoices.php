@@ -6,14 +6,17 @@ use CapsuleB\EverHour\Client;
 use Exception;
 
 /**
- * Class Projects
+ * Class Invoices
  * @package CapsuleB\EverHour\Resources
  *
  * @property Client $client
  */
-class Projects {
+class Invoices {
+
+  const BASE_URL = 'clients';
+
   /**
-   * Projects constructor.
+   * Invoices constructor.
    * @param Client $client
    */
   public function __construct(Client $client) {
@@ -21,41 +24,51 @@ class Projects {
   }
 
   /**
-   * @return array|mixed|object
+   * @throws Exception
    */
   public function getAll() {
-    return $this->client->get('/projects');
-  }
-
-  /**
-   * @param $project string
-   * @return array|mixed|object
-   */
-  public function get(string $project) {
-    $path = sprintf("/projects/%s", $project);
-    return $this->client->get($path);
-  }
-
-  /**
-   * @return array|mixed|object
-   */
-  public function create() {
-    return $this->client->post('/projects');
-  }
-
-  /**
-   * @param $project
-   * @return array|mixed|object
-   */
-  public function update($project) {
-    $path = sprintf("/projects/%s", $project);
-    return $this->client->put($path);
+    throw new Exception('Not implemented');
   }
 
   /**
    * @throws Exception
    */
-  public function updateBillingBudget() {
+  public function get() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function create() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function update() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function refreshLineItems() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function markAs() {
+    throw new Exception('Not implemented');
+  }
+
+  /**
+   * @throws Exception
+   */
+  public function exportTo() {
     throw new Exception('Not implemented');
   }
 
@@ -63,41 +76,6 @@ class Projects {
    * @throws Exception
    */
   public function delete() {
-    throw new Exception('Not implemented');
-  }
-
-  /**
-   * @throws Exception
-   */
-  public function getAllSections() {
-    throw new Exception('Not implemented');
-  }
-
-  /**
-   * @throws Exception
-   */
-  public function getSection() {
-    throw new Exception('Not implemented');
-  }
-
-  /**
-   * @throws Exception
-   */
-  public function createSection() {
-    throw new Exception('Not implemented');
-  }
-
-  /**
-   * @throws Exception
-   */
-  public function updateSection() {
-    throw new Exception('Not implemented');
-  }
-
-  /**
-   * @throws Exception
-   */
-  public function deleteSection() {
     throw new Exception('Not implemented');
   }
 

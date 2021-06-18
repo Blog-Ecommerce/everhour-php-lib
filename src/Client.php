@@ -4,13 +4,13 @@ namespace CapsuleB\EverHour;
 
 use CapsuleB\EverHour\Resources\Projects;
 use CapsuleB\EverHour\Resources\Tasks;
-use CapsuleB\EverHour\Resources\TimeRecording;
+use CapsuleB\EverHour\Resources\TimeRecorders;
 use CapsuleB\EverHour\Resources\Users;
 use Exception;
 
 /**
  * Class Client
- * @package Everhour
+ * @package CapsuleB\EverHour
  *
  * @property $curlClient
  * @property $apiKey
@@ -33,7 +33,7 @@ class Client {
     $this->projects       = new Projects($this);
     $this->users          = new Users($this);
     $this->tasks          = new Tasks($this);
-    $this->timeRecording  = new TimeRecording($this);
+    $this->timeRecording  = new TimeRecorders($this);
   }
 
   /**
