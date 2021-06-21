@@ -2,22 +2,39 @@
 
 namespace CapsuleB\EverHour;
 
+use CapsuleB\EverHour\Resources\Clients;
+use CapsuleB\EverHour\Resources\Expenses;
+use CapsuleB\EverHour\Resources\Invoices;
 use CapsuleB\EverHour\Resources\Projects;
+use CapsuleB\EverHour\Resources\Reports;
+use CapsuleB\EverHour\Resources\Schedule;
 use CapsuleB\EverHour\Resources\Tasks;
+use CapsuleB\EverHour\Resources\Timecards;
 use CapsuleB\EverHour\Resources\TimeRecorders;
+use CapsuleB\EverHour\Resources\Timers;
 use CapsuleB\EverHour\Resources\Users;
+use CapsuleB\EverHour\Resources\Webhooks;
 use Exception;
 
 /**
  * Class Client
  * @package CapsuleB\EverHour
  *
- * @property $curlClient
  * @property $apiKey
- * @property $projects
- * @property $users
- * @property $tasks
- * @property $timeRecording
+ * @property $curlClient
+ *
+ * @property Clients        $clients
+ * @property Expenses       $expenses
+ * @property Invoices       $invoices
+ * @property Projects       $projects
+ * @property Reports        $reports
+ * @property Schedule       $schedule
+ * @property Tasks          $tasks
+ * @property Timecards      $timecards
+ * @property TimeRecorders  $timeRecorders
+ * @property Timers         $timers
+ * @property Users          $users
+ * @property Webhooks       $webhooks
  */
 class Client {
 
@@ -30,10 +47,20 @@ class Client {
   public function __construct($apiKey) {
     $this->curlClient     = curl_init();
     $this->apiKey         = $apiKey;
+
+    // Init the Resources
+    $this->clients        = new Clients($this);
+    $this->expenses       = new Expenses($this);
+    $this->invoices       = new Invoices($this);
     $this->projects       = new Projects($this);
-    $this->users          = new Users($this);
+    $this->reports        = new Reports($this);
+    $this->schedule       = new Schedule($this);
     $this->tasks          = new Tasks($this);
-    $this->timeRecording  = new TimeRecorders($this);
+    $this->timecards      = new Timecards($this);
+    $this->timeRecorders  = new TimeRecorders($this);
+    $this->timers         = new Timers($this);
+    $this->users          = new Users($this);
+    $this->webhooks       = new Webhooks($this);
   }
 
   /**
